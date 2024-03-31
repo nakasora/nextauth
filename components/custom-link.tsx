@@ -29,7 +29,7 @@ const CustomLink = ({
       rel="noopener noreferrer"
       className={cn(
         "inline-flex align-baseline gap-1 items-center underline underline-offset-4",
-        className
+        className,
       )}
       {...rest}
     >

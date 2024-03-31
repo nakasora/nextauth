@@ -1,5 +1,7 @@
-import { Button } from "./ui/button";
 import { auth } from "@/auth";
+import { SignIn, SignOut } from "./auth-components";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,12 +9,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { SignIn, SignOut } from "./auth-components";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 export default async function UserButton() {
   const session = await auth();
-  if (!session?.user) return <SignIn provider="github"/>;
+  if (!session?.user) return <SignIn provider="github" />;
 
   return (
     <div className="flex gap-2 items-center">

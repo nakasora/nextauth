@@ -3,7 +3,9 @@
 import Image from "next/image";
 
 import { cn } from "@/lib/utils";
+import React from "react";
 import CustomLink from "./custom-link";
+import { Button } from "./ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,8 +15,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
-import React from "react";
-import { Button } from "./ui/button";
 
 export function MainNav() {
   return (
@@ -73,7 +73,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
